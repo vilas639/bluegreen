@@ -1,0 +1,14 @@
+---
+apiVersion: v2
+kind: Service
+metadata:
+  name: bluegreenliveservice
+spec:
+      type: NodePort
+      selector:
+        version: v2
+      ports:
+      - port: 80
+        targetPort: 8080
+        nodePort: 31785
+...
