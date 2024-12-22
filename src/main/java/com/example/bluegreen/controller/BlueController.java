@@ -20,6 +20,7 @@ public class BlueController {
 	@GetMapping("test1")
     public String hi()
     {
+		//testing
         return  "Welcome Blue Deployment";
     }
 	
@@ -29,7 +30,7 @@ public class BlueController {
 	       
 
 	       
-
+             //testing2
 	        // Return the response with the JSON body
 	        return ResponseEntity.status(HttpStatus.OK)
 	                .body(("welcome Back Blue"));
