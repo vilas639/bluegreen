@@ -20,6 +20,7 @@ public class BlueController {
 	@GetMapping("test1")
     public String hi()
     {
+		//testing
         return  "Welcome Blue Deployment";
     }
 	
