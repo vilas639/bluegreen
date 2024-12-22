@@ -11,14 +11,14 @@ spec:
     matchLabels:
       app: bluegreen-app
       version: v2
-      color: blue
+      color: green
   template:
     metadata:
       name: bluegreenapppod
       labels:
         app: bluegreen-app
         version: v2
-        color: blue
+        color: green
     spec:
       containers:
       - name: bluegreencontainer
