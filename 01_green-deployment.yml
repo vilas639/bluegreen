@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greendeployment
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: bluegreen-app
+      version: v2
+      color: green
+  template:
+    metadata:
+      name: bluegreenapppod
+      labels:
+        app: bluegreen-app
+        version: v2
+        color: green
+    spec:
+      containers:
+      - name: bluegreencontainer
+        image: vilasjdhv639/bluegreen:v2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+...
