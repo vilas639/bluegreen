@@ -21,7 +21,7 @@ public class BlueController {
     public String hi()
     {
 		//testing
-        return  "Welcome Blue Deployment";
+        return  "Welcome Green Deployment";
     }
 	
 	
@@ -33,6 +33,6 @@ public class BlueController {
              //testing2
 	        // Return the response with the JSON body
 	        return ResponseEntity.status(HttpStatus.OK)
-	                .body(("welcome Back Blue"));
+	                .body(("welcome Back Green"));
 	    }
 }
