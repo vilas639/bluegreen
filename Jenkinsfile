@@ -55,7 +55,7 @@ pipeline {
 //sh "docker login -u ashokit -p ${dockerpwd}"
 //sh "docker push ashokit/app1"
 //}          
-          
+          echo "Docker Push"  
         }
         }
 
