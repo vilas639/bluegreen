@@ -18,7 +18,6 @@ pipeline {
         }
         stage('Maven Build') {
             steps {
-
                 sh 'mvn clean package'
                echo "mvn clean pacakage"
             }
@@ -69,8 +68,6 @@ sh "docker push vilasjdhv639/bluegreen:v3"
           echo "Docker Push"  
 
             }
-
-
         }
 
         }
@@ -87,6 +84,10 @@ sh "docker push vilasjdhv639/bluegreen:v3"
 
 
 }
+
+
+}
+
 
 }
 }
