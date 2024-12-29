@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: bluegreencontainer
-        image: vilasjdhv639/bluegreen
+        image: vilasjdhv639/bluegreen:v3
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
