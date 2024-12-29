@@ -25,6 +25,9 @@ pipeline {
         stage('Sonar Scan') {
             steps {
                // sh 'mvn clean package'
+              sh  'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=vilas639_eos'
+
+
                echo "Sonar Scan"
             }
         }
@@ -51,9 +54,9 @@ pipeline {
         
         stage('Docker Image') {
             steps {
-               sh 'docker build -t vilasjdhv639/bluegreen:v3 .'
+              // sh 'docker build -t vilasjdhv639/bluegreen:v3 .'
                echo "build docker images"
-               // sh 'mvn clean package'
+              
               
             }
         }
@@ -62,8 +65,8 @@ pipeline {
             steps {
 
       
-    sh "docker login -u vilasjdhv639 -p Vilas@123"
-sh "docker push vilasjdhv639/bluegreen:v3"
+ //   sh "docker login -u vilasjdhv639 -p Vilas@123"
+//sh "docker push vilasjdhv639/bluegreen:v3"
        
           echo "Docker Push"  
 
@@ -75,8 +78,8 @@ sh "docker push vilasjdhv639/bluegreen:v3"
         stage('k8s deployment') {
             steps {
 
-                  sh "kubectl apply -f 01_blue-deployment.yml"
-  sh "kubectl apply -f 02_live-service.yml"
+               //   sh "kubectl apply -f 01_blue-deployment.yml"
+  //sh "kubectl apply -f 02_live-service.yml"
          echo "k8s deployment"  
 
             }
