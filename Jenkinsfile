@@ -44,7 +44,7 @@ pipeline {
         
         stage('Docker Image') {
             steps {
-               sh 'sudo docker build -t vilasjdhv639/bluegreen:v3 .'
+               sh 'docker build -t vilasjdhv639/bluegreen:v3 .'
                echo "build docker images"
             }
         }
