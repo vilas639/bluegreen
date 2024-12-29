@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-               // git 'https://github.com/ashokitschool/maven-web-app.git'
+               git branch: 'prod', credentialsId: 'GIT_Credentials', url: 'https://github.com/vilas639/bluegreen.git'
                echo "clone repo"
             }
         }
