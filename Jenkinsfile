@@ -52,7 +52,7 @@ pipeline {
             steps {
       
     sh "docker login -u vilasjdhv639 -p Vilas@123"
-sh "docker push push vilasjdhv639/bluegreen:v3"
+sh "docker push vilasjdhv639/bluegreen:v3"
        
           echo "Docker Push"  
         }
