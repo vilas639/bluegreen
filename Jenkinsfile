@@ -44,8 +44,8 @@ pipeline {
         
         stage('Docker Image') {
             steps {
-                //sh 'docker build -t ashokit/mavenwebapp .'
-                echo "build docker images"
+               sh 'docker sudo docker build -t vilasjdhv639/bluegreen:v3 .'
+               echo "build docker images"
             }
         }
         stage('Docker Push') {
