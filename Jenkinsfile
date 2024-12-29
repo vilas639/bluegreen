@@ -15,6 +15,33 @@ pipeline {
                echo "mvn clean pacakage"
             }
         }
+        stage('Sonar Scan') {
+            steps {
+               // sh 'mvn clean package'
+               echo "Sonar Scan"
+            }
+        }
+
+     stage('Artifactory configuration') {
+            steps {
+               // sh 'mvn clean package'
+               echo "Artifactory configuration"
+            }
+        }
+         stage('Deploy Artifacts') {
+            steps {
+               // sh 'mvn clean package'
+               echo "Deploy Artifacts"
+            }
+        }
+        
+        stage('Publish build info') {
+            steps {
+               // sh 'mvn clean package'
+               echo "Publish build info"
+            }
+        }
+        
         stage('Docker Image') {
             steps {
                 //sh 'docker build -t ashokit/mavenwebapp .'
@@ -28,16 +55,22 @@ pipeline {
 //sh "docker login -u ashokit -p ${dockerpwd}"
 //sh "docker push ashokit/app1"
 //}          
-          echo "k8s deployment"  
+          
         }
         }
 
         stage('k8s deployment') {
             steps {
-             // sh 'kubectl delete deployment mavenwebapppdepllyment'
-             //   sh 'kubectl apply -f maven-web-app-deploy.yml'
-             echo "k8s deployment"
+         echo "k8s deployment"  
+
             }
-        }
-    }
+            }
+
+           
+
+
 }
+}
+
+
+
