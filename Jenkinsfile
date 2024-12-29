@@ -68,7 +68,6 @@ sh "docker push vilasjdhv639/bluegreen:v3"
           echo "Docker Push"  
 
             }
-
         }
 
         }
@@ -83,7 +82,13 @@ sh "docker push vilasjdhv639/bluegreen:v3"
             }
             }
 
+
 }
+
+
+}
+
+
 }
 }
 
