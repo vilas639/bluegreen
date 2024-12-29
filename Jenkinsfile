@@ -6,18 +6,18 @@ pipeline {
         stage('Clone Repo') {
             steps {
 
+
                git branch: 'prod', credentialsId: 'GIT_Credentials', url: 'https://github.com/vilas639/bluegreen.git'
                // git 'https://github.com/ashokitschool/maven-web-app.git'
 
 
                // git 'https://github.com/ashokitschool/maven-web-app.git'
+
                echo "clone repo"
             }
         }
         stage('Maven Build') {
             steps {
-
-
                 sh 'mvn clean package'
                echo "mvn clean pacakage"
             }
@@ -66,13 +66,15 @@ pipeline {
 sh "docker push vilasjdhv639/bluegreen:v3"
        
           echo "Docker Push"  
+
             }
+
+        }
+
         }
 
         stage('k8s deployment') {
             steps {
-
-
 
                   sh "kubectl apply -f 01_blue-deployment.yml"
   sh "kubectl apply -f 02_live-service.yml"
@@ -81,9 +83,7 @@ sh "docker push vilasjdhv639/bluegreen:v3"
             }
             }
 
-           
-
-
+}
 }
 }
 
