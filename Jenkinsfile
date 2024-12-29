@@ -73,7 +73,7 @@ pipeline {
             }
         }
 
-        }
+        
 
         stage('k8s deployment') {
             steps {
@@ -86,13 +86,8 @@ pipeline {
             }
 
 
-}
-
 
 }
 
 
 }
-}
-
-
