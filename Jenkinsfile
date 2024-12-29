@@ -60,6 +60,9 @@ sh "docker push vilasjdhv639/bluegreen:v3"
 
         stage('k8s deployment') {
             steps {
+
+                  sh "kubectl apply -f 01_blue-deployment.yml"
+  sh "kubectl apply -f 02_live-service.yml"
          echo "k8s deployment"  
 
             }
