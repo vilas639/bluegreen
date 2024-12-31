@@ -29,7 +29,10 @@ pipeline {
                 //  -Dsonar.projectKey=vilas639_eos \
                   //-Dsonar.branch.name=prod \
                   //-Dsonar.login=0a72fa7c019b5d197995330462ba3dff8189f3d9'
-
+               withSonarQubeEnv('SonarServer')
+	              {
+	              sh 'mvn sonar:sonar'
+	               }
                echo "Sonar Scan"
             }
         }
