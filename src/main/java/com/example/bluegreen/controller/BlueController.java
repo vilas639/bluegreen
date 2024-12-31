@@ -1,6 +1,5 @@
 package com.example.bluegreen.controller;
 
-import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
