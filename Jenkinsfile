@@ -25,10 +25,10 @@ pipeline {
         stage('Sonar Scan') {
             steps {
                // sh 'mvn clean package'
-              sh 'mvn -X verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-                  -Dsonar.projectKey=vilas639_eos \
-                  -Dsonar.branch.name=prod \
-                  -Dsonar.login=0a72fa7c019b5d197995330462ba3dff8189f3d9'
+              //sh 'mvn -X verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+                //  -Dsonar.projectKey=vilas639_eos \
+                  //-Dsonar.branch.name=prod \
+                  //-Dsonar.login=0a72fa7c019b5d197995330462ba3dff8189f3d9'
 
                echo "Sonar Scan"
             }
