@@ -40,12 +40,14 @@ pipeline {
      stage('Artifactory configuration') {
             steps {
                // sh 'mvn clean package'
+		    
                echo "Artifactory configuration"
             }
         }
          stage('Deploy Artifacts') {
             steps {
                // sh 'mvn clean package'
+	       nexusArtifactUploader artifacts: [[artifactId: 'bluegreen', classifier: '', file: 'target/bluegreen-0.0.1-SNAPSHOT.jar', type: 'jar']], credentialsId: 'nexus-cred', groupId: 'com.example', nexusUrl: '51.20.74.27:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'bluegreen-snapshot-repo', version: '0.0.1-SNAPSHOT'	    
                echo "Deploy Artifacts"
             }
         }
